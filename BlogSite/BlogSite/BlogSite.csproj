@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master\blogSiteMaster.Master" />
+    <Content Include="Pages\bolger.aspx" />
     <Content Include="tem\css_pirobox\shadow\Thumbs.db" />
     <Content Include="tem\css_pirobox\Thumbs.db" />
     <Content Include="tem\css_pirobox\white\Thumbs.db" />
@@ -410,6 +411,7 @@
     <Content Include="tem\js\swfobject.js" />
     <Content Include="tem\photo_list.xml" />
     <Content Include="tem\portfolio.html" />
+    <Content Include="typing.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -440,6 +442,13 @@
     </Compile>
     <Compile Include="Pages\blog_post.aspx.designer.cs">
       <DependentUpon>blog_post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\bolger.aspx.cs">
+      <DependentUpon>bolger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\bolger.aspx.designer.cs">
+      <DependentUpon>bolger.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
