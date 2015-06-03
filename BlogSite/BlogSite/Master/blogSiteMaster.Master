@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="blogSiteMaster.master.cs" Inherits="BlogSite.blogSiteMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Dream Coder</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="../css/tooplate_style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/ddsmoothmenu.css" rel="stylesheet" type="text/css"/>
+
+    
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/ddsmoothmenu.js"></script>
+    
+    
+    <script type="text/javascript">
+        ddsmoothmenu.init({
+            mainmenuid: "tooplate_menu", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="masterForm" runat="server">
+        <div>
+            <div id="tooplate_wrapper">
+                <div id="tooplate_header">
+
+                    <div id="site_title">
+                        <h1><a href="#">Pinky Flow</a></h1>
+                    </div>
+
+                    <div id="tooplate_menu" class="ddsmoothmenu">
+                        <ul>
+                            <li><a href="../Pages/index.aspx" class="selected"><span></span>Home</a></li>
+                            <li><a href="../Pages/about.aspx"><span></span>About Us</a>
+                                <ul>
+                                    <li><a href="#">Sub menu 1</a></li>
+                                    <li><a href="#">Sub menu 2</a></li>
+                                    <li><a href="#">Sub menu 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../Pages/portfolio.aspx"><span></span>Portfolio</a>
+                                <ul>
+                                    <li><a href="#">Sub menu 1</a></li>
+                                    <li><a href="#">Sub menu 2</a></li>
+                                    <li><a href="#">Sub menu 3</a></li>
+                                    <li><a href="#">Sub menu 4</a></li>
+                                    <li><a href="#">Sub menu 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../Pages/blog.aspx"><span></span>Blog</a></li>
+                            <li><a href="../Pages/contact.aspx"><span></span>Contact</a></li>
+                        </ul>
+                        <br style="clear: left" />
+                    </div>
+                    <!-- end of tooplate_menu -->
+
+                    <div>
+                        <asp:ContentPlaceHolder ID="Container" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+
+                    <div>
+                        <asp:ContentPlaceHolder ID="Footer" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+                    <div id="tooplate_footer">
+                        Copyright © 2048 <a href="#">Company Name</a>
+                        <div class="cleaner"></div>
+                    </div>
+                </div>
+                <!-- end of forever header -->
+            </div>
+            <!-- end of forever wrapper -->
+        </div>
+    </form>
+</body>
+</html>
