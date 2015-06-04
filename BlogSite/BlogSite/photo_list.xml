@@ -8,12 +8,12 @@
 		grid_column="10" 
 		tween_duration="0.64" 
 		tween_delay="0.015"
-		stylesheet="../css/slider_style.css"
+		stylesheet="css/slider_style.css"
 		bar_status="1">
 	</config>
 	
 	<photo>
-		<filename>../images/slider/photo_900x240_02.jpg</filename>
+		<filename>images/slider/photo_900x240_02.jpg</filename>
 		<description><![CDATA[<p class="subtitle">Image title one goes here</p><p><a href="http://www.google.com" target="_parent">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit. <span class="highlight">Quisque at ante sit amet</span> erat laoreet <u>fermentum</u>. Quisque nec nisl. Nam scelerisque cursus dolor. Donec in. <span class="note">This text is dynamically loaded from the external XML file. This textfield supports HTML and CSS.</span></p>]]></description>
 		<transition flow="in" direction="right" rotation="180"></transition>
 	</photo>

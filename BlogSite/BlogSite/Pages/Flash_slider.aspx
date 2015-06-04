@@ -1,6 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-	<head>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Flash_slider.aspx.cs" Inherits="BlogSite.Pages.Flash_slider" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
 		<title>Flash XML Grid Slider</title>
         <meta name="Keywords" content="" />
         <meta name="Description" content="" />
@@ -39,13 +42,13 @@
         
 		<script type="text/javascript" src="js/swfobject.js"></script>
 		<script type="text/javascript">
-			var flashvars = {};
-			flashvars.xml_file = "photo_list.xml";
-			var params = {};
-			params.wmode = "transparent";
-			var attributes = {};
-			attributes.id = "slider";
-			swfobject.embedSWF("flash_slider.swf", "flash_grid_slider", "900", "240", "9.0.0", false, flashvars, params, attributes);
+		    var flashvars = {};
+		    flashvars.xml_file = "photo_list.xml";
+		    var params = {};
+		    params.wmode = "transparent";
+		    var attributes = {};
+		    attributes.id = "slider";
+		    swfobject.embedSWF("flash_slider.swf", "flash_grid_slider", "900", "240", "9.0.0", false, flashvars, params, attributes);
 		</script>
         
         

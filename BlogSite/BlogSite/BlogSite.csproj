@@ -57,10 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="flash_slider.swf" />
+    <Content Include="images\DreamCoder.png" />
+    <Content Include="images\DreamCoderfi.png" />
     <Content Include="Master\blogSiteMaster.Master" />
-    <Content Include="tem\css_pirobox\shadow\Thumbs.db" />
-    <Content Include="tem\css_pirobox\Thumbs.db" />
-    <Content Include="tem\css_pirobox\white\Thumbs.db" />
+    <Content Include="Pages\bolger.aspx" />
     <Content Include="css_pirobox\shadow\Thumbs.db" />
     <Content Include="css_pirobox\Thumbs.db" />
     <Content Include="css_pirobox\white\Thumbs.db" />
@@ -231,185 +232,16 @@
     <Content Include="js\piroBox.1_2_min.js" />
     <Content Include="js\swfobject.js" />
     <Content Include="Pages\about.aspx" />
-    <Content Include="Pages\about.html" />
     <Content Include="Pages\blog.aspx" />
-    <Content Include="Pages\blog.html" />
     <Content Include="Pages\blog_post.aspx" />
-    <Content Include="Pages\blog_post.html" />
     <Content Include="Pages\contact.aspx" />
-    <Content Include="Pages\contact.html" />
+    <Content Include="Pages\Flash_slider.aspx" />
     <Content Include="Pages\flash_slider.html" />
+    <Content Include="Pages\flash_slider.swf" />
     <Content Include="Pages\index.aspx" />
-    <Content Include="Pages\index.html" />
+    <Content Include="Pages\photo_list.xml" />
     <Content Include="Pages\portfolio.aspx" />
-    <Content Include="Pages\portfolio.html" />
-    <Content Include="tem\about.html" />
-    <Content Include="tem\blog.html" />
-    <Content Include="tem\blog_post.html" />
-    <Content Include="tem\contact.html" />
-    <Content Include="tem\css\ddsmoothmenu.css" />
-    <Content Include="tem\css\jquery.lightbox-0.5.css" />
-    <Content Include="tem\css\slider_style.css" />
-    <Content Include="tem\css\slider_style1.css" />
-    <Content Include="tem\css\svwp_style.css" />
-    <Content Include="tem\css\tooplate_style.css" />
-    <Content Include="tem\css_pirobox\bg_tms.jpg" />
-    <Content Include="tem\css_pirobox\black\ajax-loader_b.gif" />
-    <Content Include="tem\css_pirobox\black\bg_load.gif" />
-    <Content Include="tem\css_pirobox\black\bg_load.png" />
-    <Content Include="tem\css_pirobox\black\b_c.png" />
-    <Content Include="tem\css_pirobox\black\b_l.png" />
-    <Content Include="tem\css_pirobox\black\b_r.png" />
-    <Content Include="tem\css_pirobox\black\c.png" />
-    <Content Include="tem\css_pirobox\black\close_btn3.png" />
-    <Content Include="tem\css_pirobox\black\c_l.png" />
-    <Content Include="tem\css_pirobox\black\c_r.png" />
-    <Content Include="tem\css_pirobox\black\img_bg.png" />
-    <Content Include="tem\css_pirobox\black\link_out.gif" />
-    <Content Include="tem\css_pirobox\black\link_out.png" />
-    <Content Include="tem\css_pirobox\black\link_out_h.gif" />
-    <Content Include="tem\css_pirobox\black\link_out_h.png" />
-    <Content Include="tem\css_pirobox\black\next.png" />
-    <Content Include="tem\css_pirobox\black\nextoutside.png" />
-    <Content Include="tem\css_pirobox\black\nextoutside_h.png" />
-    <Content Include="tem\css_pirobox\black\next_h.png" />
-    <Content Include="tem\css_pirobox\black\pause.png" />
-    <Content Include="tem\css_pirobox\black\pause_h.png" />
-    <Content Include="tem\css_pirobox\black\play.png" />
-    <Content Include="tem\css_pirobox\black\play_h.png" />
-    <Content Include="tem\css_pirobox\black\prev.png" />
-    <Content Include="tem\css_pirobox\black\prevoutside.png" />
-    <Content Include="tem\css_pirobox\black\prevoutside_h.png" />
-    <Content Include="tem\css_pirobox\black\prev_h.png" />
-    <Content Include="tem\css_pirobox\black\style.css" />
-    <Content Include="tem\css_pirobox\black\t_c.png" />
-    <Content Include="tem\css_pirobox\black\t_l.png" />
-    <Content Include="tem\css_pirobox\black\t_r.png" />
-    <Content Include="tem\css_pirobox\css_page.css" />
-    <Content Include="tem\css_pirobox\shadow\ajax-loader_b.gif" />
-    <Content Include="tem\css_pirobox\shadow\bg_load.gif" />
-    <Content Include="tem\css_pirobox\shadow\bg_load.png" />
-    <Content Include="tem\css_pirobox\shadow\b_c.png" />
-    <Content Include="tem\css_pirobox\shadow\b_l.png" />
-    <Content Include="tem\css_pirobox\shadow\b_r.png" />
-    <Content Include="tem\css_pirobox\shadow\close_btn3.png" />
-    <Content Include="tem\css_pirobox\shadow\c_l.png" />
-    <Content Include="tem\css_pirobox\shadow\c_r.png" />
-    <Content Include="tem\css_pirobox\shadow\img_bg.png" />
-    <Content Include="tem\css_pirobox\shadow\link_out.gif" />
-    <Content Include="tem\css_pirobox\shadow\link_out.png" />
-    <Content Include="tem\css_pirobox\shadow\link_out_h.gif" />
-    <Content Include="tem\css_pirobox\shadow\link_out_h.png" />
-    <Content Include="tem\css_pirobox\shadow\next.png" />
-    <Content Include="tem\css_pirobox\shadow\nextoutside.png" />
-    <Content Include="tem\css_pirobox\shadow\nextoutside_h.png" />
-    <Content Include="tem\css_pirobox\shadow\next_h.png" />
-    <Content Include="tem\css_pirobox\shadow\pause.png" />
-    <Content Include="tem\css_pirobox\shadow\pause_h.png" />
-    <Content Include="tem\css_pirobox\shadow\play.png" />
-    <Content Include="tem\css_pirobox\shadow\play_h.png" />
-    <Content Include="tem\css_pirobox\shadow\prev.png" />
-    <Content Include="tem\css_pirobox\shadow\prevoutside.png" />
-    <Content Include="tem\css_pirobox\shadow\prevoutside_h.png" />
-    <Content Include="tem\css_pirobox\shadow\prev_h.png" />
-    <Content Include="tem\css_pirobox\shadow\style.css" />
-    <Content Include="tem\css_pirobox\shadow\t_c.png" />
-    <Content Include="tem\css_pirobox\shadow\t_l.png" />
-    <Content Include="tem\css_pirobox\shadow\t_r.png" />
-    <Content Include="tem\css_pirobox\shad_bg.jpg" />
-    <Content Include="tem\css_pirobox\white\ajax-loader_b.gif" />
-    <Content Include="tem\css_pirobox\white\ajax-loader_w.gif" />
-    <Content Include="tem\css_pirobox\white\bg_load.gif" />
-    <Content Include="tem\css_pirobox\white\bg_load.png" />
-    <Content Include="tem\css_pirobox\white\bg_load_w.png" />
-    <Content Include="tem\css_pirobox\white\b_c.png" />
-    <Content Include="tem\css_pirobox\white\b_l.png" />
-    <Content Include="tem\css_pirobox\white\b_r.png" />
-    <Content Include="tem\css_pirobox\white\c.png" />
-    <Content Include="tem\css_pirobox\white\close_btn3.png" />
-    <Content Include="tem\css_pirobox\white\credits_bg.png" />
-    <Content Include="tem\css_pirobox\white\c_l.png" />
-    <Content Include="tem\css_pirobox\white\c_r.png" />
-    <Content Include="tem\css_pirobox\white\img_bg.png" />
-    <Content Include="tem\css_pirobox\white\link_out.gif" />
-    <Content Include="tem\css_pirobox\white\link_out.png" />
-    <Content Include="tem\css_pirobox\white\link_out_h.gif" />
-    <Content Include="tem\css_pirobox\white\link_out_h.png" />
-    <Content Include="tem\css_pirobox\white\next.png" />
-    <Content Include="tem\css_pirobox\white\nextoutside.png" />
-    <Content Include="tem\css_pirobox\white\nextoutside_h.png" />
-    <Content Include="tem\css_pirobox\white\next_h.png" />
-    <Content Include="tem\css_pirobox\white\pause.png" />
-    <Content Include="tem\css_pirobox\white\pause_h.png" />
-    <Content Include="tem\css_pirobox\white\pirobox_down.png" />
-    <Content Include="tem\css_pirobox\white\play.png" />
-    <Content Include="tem\css_pirobox\white\play_h.png" />
-    <Content Include="tem\css_pirobox\white\prev.png" />
-    <Content Include="tem\css_pirobox\white\prevoutside.png" />
-    <Content Include="tem\css_pirobox\white\prevoutside_h.png" />
-    <Content Include="tem\css_pirobox\white\prev_h.png" />
-    <Content Include="tem\css_pirobox\white\style.css" />
-    <Content Include="tem\css_pirobox\white\t_c.png" />
-    <Content Include="tem\css_pirobox\white\t_l.png" />
-    <Content Include="tem\css_pirobox\white\t_r.png" />
-    <Content Include="tem\flash_slider.html" />
-    <Content Include="tem\flash_slider.swf" />
-    <Content Include="tem\images\avator.png" />
-    <Content Include="tem\images\gallery\image_01_l.jpg" />
-    <Content Include="tem\images\gallery\image_01_s.jpg" />
-    <Content Include="tem\images\gallery\image_02_l.jpg" />
-    <Content Include="tem\images\gallery\image_02_s.jpg" />
-    <Content Include="tem\images\gallery\image_03_l.jpg" />
-    <Content Include="tem\images\gallery\image_03_s.jpg" />
-    <Content Include="tem\images\gallery\image_04_l.jpg" />
-    <Content Include="tem\images\gallery\image_04_s.jpg" />
-    <Content Include="tem\images\gallery\image_05_l.jpg" />
-    <Content Include="tem\images\gallery\image_05_s.jpg" />
-    <Content Include="tem\images\gallery\image_06_l.jpg" />
-    <Content Include="tem\images\gallery\image_06_s.jpg" />
-    <Content Include="tem\images\gallery\image_07_l.jpg" />
-    <Content Include="tem\images\gallery\image_07_s.jpg" />
-    <Content Include="tem\images\gallery\image_08_l.jpg" />
-    <Content Include="tem\images\gallery\image_08_s.jpg" />
-    <Content Include="tem\images\lightbox-blank.gif" />
-    <Content Include="tem\images\lightbox-btn-close.gif" />
-    <Content Include="tem\images\lightbox-ico-loading.gif" />
-    <Content Include="tem\images\map_big.jpg" />
-    <Content Include="tem\images\map_thumb.jpg" />
-    <Content Include="tem\images\post-it-48px.png" />
-    <Content Include="tem\images\rosette-48px.png" />
-    <Content Include="tem\images\slider\photo_900x240_01.jpg" />
-    <Content Include="tem\images\slider\photo_900x240_02.jpg" />
-    <Content Include="tem\images\slider\photo_900x240_03.jpg" />
-    <Content Include="tem\images\slider\photo_900x240_04.jpg" />
-    <Content Include="tem\images\slider\photo_900x240_05.jpg" />
-    <Content Include="tem\images\slider\photo_900x240_06.jpg" />
-    <Content Include="tem\images\tick-48px.png" />
-    <Content Include="tem\images\tooplate_body.jpg" />
-    <Content Include="tem\images\tooplate_content_middle.png" />
-    <Content Include="tem\images\tooplate_footer.png" />
-    <Content Include="tem\images\tooplate_header.png" />
-    <Content Include="tem\images\tooplate_image_01.jpg" />
-    <Content Include="tem\images\tooplate_image_02.png" />
-    <Content Include="tem\images\tooplate_image_03.png" />
-    <Content Include="tem\images\tooplate_image_04.png" />
-    <Content Include="tem\images\tooplate_image_05.png" />
-    <Content Include="tem\images\tooplate_list.png" />
-    <Content Include="tem\images\tooplate_logo.png" />
-    <Content Include="tem\images\tooplate_more.png" />
-    <Content Include="tem\images\tooplate_slider.png" />
-    <Content Include="tem\index.html" />
-    <Content Include="tem\js\ddsmoothmenu.js" />
-    <Content Include="tem\js\jquery.js" />
-    <Content Include="tem\js\jquery.lightbox-0.5.js" />
-    <Content Include="tem\js\jquery.lightbox-0.5.min.js" />
-    <Content Include="tem\js\jquery.lightbox-0.5.pack.js" />
-    <Content Include="tem\js\jquery.min.js" />
-    <Content Include="tem\js\piroBox.1_2.js" />
-    <Content Include="tem\js\piroBox.1_2_min.js" />
-    <Content Include="tem\js\swfobject.js" />
-    <Content Include="tem\photo_list.xml" />
-    <Content Include="tem\portfolio.html" />
+    <Content Include="photo_list.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -441,12 +273,26 @@
     <Compile Include="Pages\blog_post.aspx.designer.cs">
       <DependentUpon>blog_post.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\bolger.aspx.cs">
+      <DependentUpon>bolger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\bolger.aspx.designer.cs">
+      <DependentUpon>bolger.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Flash_slider.aspx.cs">
+      <DependentUpon>Flash_slider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Flash_slider.aspx.designer.cs">
+      <DependentUpon>Flash_slider.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
