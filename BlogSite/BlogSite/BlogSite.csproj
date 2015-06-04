@@ -57,11 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="flash_slider.swf" />
-    <Content Include="images\DreamCoder.png" />
-    <Content Include="images\DreamCoderfi.png" />
     <Content Include="Master\blogSiteMaster.Master" />
     <Content Include="Pages\bolger.aspx" />
+    <Content Include="Pages\Flash_slider.aspx" />
+    <Content Include="Pages\flash_slider.swf" />
+    <Content Include="Pages\photo_list.xml" />
     <Content Include="css_pirobox\shadow\Thumbs.db" />
     <Content Include="css_pirobox\Thumbs.db" />
     <Content Include="css_pirobox\white\Thumbs.db" />
@@ -235,13 +235,9 @@
     <Content Include="Pages\blog.aspx" />
     <Content Include="Pages\blog_post.aspx" />
     <Content Include="Pages\contact.aspx" />
-    <Content Include="Pages\Flash_slider.aspx" />
     <Content Include="Pages\flash_slider.html" />
-    <Content Include="Pages\flash_slider.swf" />
     <Content Include="Pages\index.aspx" />
-    <Content Include="Pages\photo_list.xml" />
     <Content Include="Pages\portfolio.aspx" />
-    <Content Include="photo_list.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -275,7 +271,6 @@
     </Compile>
     <Compile Include="Pages\bolger.aspx.cs">
       <DependentUpon>bolger.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\bolger.aspx.designer.cs">
       <DependentUpon>bolger.aspx</DependentUpon>
@@ -289,7 +284,6 @@
     </Compile>
     <Compile Include="Pages\Flash_slider.aspx.cs">
       <DependentUpon>Flash_slider.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Flash_slider.aspx.designer.cs">
       <DependentUpon>Flash_slider.aspx</DependentUpon>
