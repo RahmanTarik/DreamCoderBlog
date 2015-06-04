@@ -17,7 +17,6 @@
                     <h3>Add Your Post</h3>
 
                     &nbsp;&nbsp;&nbsp;
-
                         <label for="Post Category">Post Category:</label>&nbsp;&nbsp;
                         <input type="text" id="postCategory" name="postCategory" class="required input_field" /><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -36,25 +35,17 @@
                             <br />
                             <br />
                              <asp:Button ID="saveButton" runat="server" Height="32px" Text="Save" Width="108px" />
-                           <asp:Button ID="publishButton" runat="server" Text="Publish" Width="104px" Height="34px" style="margin-right: 0px; margin-top: 0px" />
+                           <asp:Button ID="publishButton" runat="server" Text="Publish" Width="104px" Height="34px" Style="margin-right: 0kpx; margin-top: 0px" />
                      
                    
                             </label>
                         </div>
-                        
-            </div>
+
+                </div>
 
         </div>
     </div>
     </div>
-        </div>
- 
-    <!-- end of tooplate_main -->
-         </div>
-    
-        </div>
-    </div>
-    <!-- end of tooplate_main -->
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Footer" runat="server">
 </asp:Content>
