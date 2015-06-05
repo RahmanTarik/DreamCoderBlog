@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BlogSite {
+namespace BlogSite.Master {
     
     
     public partial class BlogSiteMaster {
