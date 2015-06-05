@@ -9,22 +9,9 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="../css/tooplate_style.css" rel="stylesheet" type="text/css" />
-    <link href="../css/ddsmoothmenu.css" rel="stylesheet" type="text/css"/>
-
+    <link href="../css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+    <link href="../css/jquery_popup.css" rel="stylesheet" type="text/css" />
     
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/ddsmoothmenu.js"></script>
-    
-    
-    <script type="text/javascript">
-        ddsmoothmenu.init({
-            mainmenuid: "tooplate_menu", //menu DIV id
-            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
-            classname: 'ddsmoothmenu', //class added to menu's outer DIV
-            //customtheme: ["#1c5a80", "#18374a"],
-            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
-        })
-    </script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -60,10 +47,42 @@
                             </li>
                             <li><a href="../Pages/blog.aspx"><span></span>Blog</a></li>
                             <li><a href="../Pages/contact.aspx"><span></span>Contact</a></li>
+                            <li style="float: right"><a href="#" id='onclickSignUp'><span></span>Sign Up</a></li>
+                            <li style="float: right"><a href="#" id='onclickSignIn'><span></span>Sign In</a></li>
                         </ul>
                         <br style="clear: left" />
                     </div>
                     <!-- end of tooplate_menu -->
+
+                    <div id="signIn">
+                        <div class="form" id="signInForm">
+                            <img src="" class="img" id="signInCancel" />
+                            <h3>Sign In</h3>
+                            <label>Email: <span></span></label>
+                            <input type="text" id="email" name="email" placeholder="Email" />
+                            <label>Password: <span></span></label>
+                            <input type="text" id="password" name="password" placeholder="Password" />
+                            <asp:Button ID="signInButton" runat="server" Text="Sign In" />
+                            <br />
+                        </div>
+                    </div>
+                    <div id="signUp">
+                        <div class="form" id="signUpForm">
+                            <img src="" class="img" id="signUpCancel" />
+                            <h3>Booking Form</h3>
+                            <label>Name: <span>*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Name" />
+                            <label>Email: <span>*</span></label>
+                            <input type="text" id="email" name="email" placeholder="Email" />
+                            <label>Contact No: <span>*</span></label>
+                            <input type="text" id="contactno" name="contactno" placeholder="11 digit Mobile no." />
+                            <label>About Problem:</label>
+                            <textarea id="message" name="problem" placeholder="Problems......."></textarea>
+                            <asp:Button ID="Button1" runat="server" Text="signin" />
+                            <br />
+                        </div>
+                    </div>
+
 
                     <div>
                         <asp:ContentPlaceHolder ID="Container" runat="server">
@@ -76,7 +95,7 @@
 
                     </div>
                     <div id="tooplate_footer">
-                        Copyright © 2048 <a href="#">Company Name</a>
+                        Copyright © 2015 <a href="#">Dream Coder</a>
                         <div class="cleaner"></div>
                     </div>
                 </div>
@@ -85,5 +104,18 @@
             <!-- end of forever wrapper -->
         </div>
     </form>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/ddsmoothmenu.js"></script>
+    <script type="text/javascript" src="../js/jquery_popup.js"></script>
+    <script type="text/javascript">
+        ddsmoothmenu.init({
+            mainmenuid: "tooplate_menu", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+    </script>
+    
 </body>
 </html>

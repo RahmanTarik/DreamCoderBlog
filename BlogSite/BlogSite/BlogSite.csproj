@@ -57,6 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\jquery_popup.css" />
+    <Content Include="js\jquery_popup.js" />
     <Content Include="Master\blogSiteMaster.Master" />
     <Content Include="Pages\bolger.aspx" />
     <Content Include="Pages\Flash_slider.aspx" />
@@ -271,6 +273,7 @@
     </Compile>
     <Compile Include="Pages\bolger.aspx.cs">
       <DependentUpon>bolger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\bolger.aspx.designer.cs">
       <DependentUpon>bolger.aspx</DependentUpon>
@@ -304,7 +307,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
+    <Folder Include="images\user\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
