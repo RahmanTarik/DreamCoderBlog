@@ -8,9 +8,6 @@
 	padding: 0;
 	list-style-type: none;
 }
-.float_Right {
-    float: right;
-}
 
 /*Top level list items*/
 .ddsmoothmenu ul li{
@@ -34,7 +31,6 @@
 	outline: none;
 	border: none;
 }
-
 
 * html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
 display: inline-block;
