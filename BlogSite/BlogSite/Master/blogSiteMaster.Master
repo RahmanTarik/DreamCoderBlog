@@ -9,9 +9,22 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="../css/tooplate_style.css" rel="stylesheet" type="text/css" />
-    <link href="../css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
-    <link href="../css/jquery_popup.css" rel="stylesheet" type="text/css" />
+    <link href="../css/ddsmoothmenu.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/jquery_popup.css" rel="stylesheet" />
     
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/ddsmoothmenu.js"></script>
+    <script src="../js/jquery_popup.js"></script>
+    
+    <script type="text/javascript">
+        ddsmoothmenu.init({
+            mainmenuid: "tooplate_menu", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+    </script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -49,11 +62,11 @@
                             <li><a href="../Pages/contact.aspx"><span></span>Contact</a></li>
                             <li style="float: right"><a id='onclickSignUp'><span></span>Sign Up</a></li>
                             <li style="float: right"><a id='onclickSignIn'><span></span>Sign In</a></li>
+                             <li><a href="../Pages/bolger.aspx"><span></span>bolger</a></li>
                         </ul>
                         <br style="clear: left" />
                     </div>
                     <!-- end of tooplate_menu -->
-
                     <div id="signIn">
                         <div class="form" id="signInForm">
                             <img src="" class="img" id="signInCancel" />
@@ -87,8 +100,6 @@
                     <div id="test" runat="server">
                         
                     </div>
-
-
                     <div>
                         <asp:ContentPlaceHolder ID="Container" runat="server">
                         </asp:ContentPlaceHolder>
@@ -100,7 +111,7 @@
 
                     </div>
                     <div id="tooplate_footer">
-                        Copyright © 2015 <a href="#">Dream Coder</a>
+                        Copyright © 2048 <a href="#">Company Name</a>
                         <div class="cleaner"></div>
                     </div>
                 </div>
@@ -109,18 +120,5 @@
             <!-- end of forever wrapper -->
         </div>
     </form>
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/ddsmoothmenu.js"></script>
-    <script type="text/javascript" src="../js/jquery_popup.js"></script>
-    <script type="text/javascript">
-        ddsmoothmenu.init({
-            mainmenuid: "tooplate_menu", //menu DIV id
-            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
-            classname: 'ddsmoothmenu', //class added to menu's outer DIV
-            //customtheme: ["#1c5a80", "#18374a"],
-            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
-        })
-    </script>
-    
 </body>
 </html>
