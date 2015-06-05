@@ -71,9 +71,10 @@ textarea{
 
 
 #signInForm,#signUpForm{
+    opacity: 1;
 	width: 50%;
-    left: 25%;
-	top: 20%;
+    left: 20%;
+	top: 18%;
 	background-color: white;
 	font-family: 'Fauna One', serif;
 	position: relative;

@@ -28,6 +28,7 @@ $(document).ready(function () {
 
         if (email == "" || password == "") {
             alert("Please Fill All Fields");
+            return false;
         } else {
             function validateEmail(email) {
                 var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
@@ -48,15 +49,36 @@ $(document).ready(function () {
 
         }
     });
-    // Login form popup login-button click event.
-    $("#loginbtn").click(function () {
-        var name = $("#username").val();
+
+    $("#signUpButton").click(function () {
+        var email = $("#email").val();
         var password = $("#password").val();
-        if (username == "" || password == "") {
-            alert("Username or Password was Wrong");
+        var lname = $("#lname").val();
+        var fname = $("#fname").val();
+
+        if (email == "" || password == "" || lname=="" || fname=="") {
+            alert("Please Fill All Fields");
+            return false;
         } else {
-            $("#logindiv").css("display", "none");
+            function validateEmail(email) {
+                var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+                if (filter.test(email)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            if (validateEmail(email)) {
+                $("#signIn").css("display", "none");
+                $(this).parent().parent().hide();
+                return true;
+            } else {
+                alert('Invalid Email Address');
+                return false;
+            }
+
         }
     });
+    
 });
 

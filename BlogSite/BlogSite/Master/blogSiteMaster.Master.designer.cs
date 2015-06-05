@@ -10,7 +10,7 @@
 namespace BlogSite {
     
     
-    public partial class blogSiteMaster {
+    public partial class BlogSiteMaster {
         
         /// <summary>
         /// head control.
@@ -47,6 +47,15 @@ namespace BlogSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button signUpButton;
+        
+        /// <summary>
+        /// test control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl test;
         
         /// <summary>
         /// Container control.

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="blogSiteMaster.master.cs" Inherits="BlogSite.blogSiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="blogSiteMaster.master.cs" Inherits="BlogSite.BlogSiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -47,8 +47,8 @@
                             </li>
                             <li><a href="../Pages/blog.aspx"><span></span>Blog</a></li>
                             <li><a href="../Pages/contact.aspx"><span></span>Contact</a></li>
-                            <li style="float: right"><a href="#" id='onclickSignUp'><span></span>Sign Up</a></li>
-                            <li style="float: right"><a href="#" id='onclickSignIn'><span></span>Sign In</a></li>
+                            <li style="float: right"><a id='onclickSignUp'><span></span>Sign Up</a></li>
+                            <li style="float: right"><a id='onclickSignIn'><span></span>Sign In</a></li>
                         </ul>
                         <br style="clear: left" />
                     </div>
@@ -62,8 +62,9 @@
                             <input type="text" id="email" name="email" placeholder="Email" />
                             <label>Password: <span></span></label>
                             <input type="text" id="password" name="password" placeholder="Password" />
-                            <asp:Button ID="signInButton" runat="server" Text="Sign In" />
                             <br />
+                            <asp:Button ID="signInButton" runat="server" Text="Sign In" OnClick="signInButton_Click" />
+                            
                         </div>
                     </div>
                     <div id="signUp">
@@ -78,10 +79,13 @@
                             <input type="text" id="rEmail" name="rEmail" placeholder="Email" />
                             <label>Password: <span>*</span></label>
                             <input type="password" id="rPassword" name="rPassword" placeholder="Password" />
-                            
-                            <asp:Button ID="signUpButton" runat="server" Text="Sign Up" />
                             <br />
+                            <asp:Button ID="signUpButton" runat="server" Text="Sign Up" OnClick="signUpButton_Click" />
+                            
                         </div>
+                    </div>
+                    <div id="test" runat="server">
+                        
                     </div>
 
 
