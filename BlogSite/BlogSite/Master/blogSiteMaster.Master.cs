@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Configuration;
+using BlogSite.BLL;
 
 namespace BlogSite.Master
 {
     public partial class BlogSiteMaster : System.Web.UI.MasterPage
     {
+        LoginManager loginManager = new LoginManager();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,6 +25,10 @@ namespace BlogSite.Master
         {
             string email = Request.Form["email"];
             string password = Request.Form["password"];
+            if (String.IsNullOrEmpty(email) || String.IsNullOrEmpty(password))
+            {
+                
+            }
             
         }
     }

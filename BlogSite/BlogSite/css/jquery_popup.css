@@ -6,11 +6,7 @@
 	font-family: 'Fauna One', serif;
 	display: block;
 }
-h2{
-	margin-left: 65px;
-	text-shadow: 1px 0px 3px gray;
-}
-h3{
+#form h3{
 	font-size: 18px;
 	text-align: center;
 	text-shadow: 1px 0px 3px gray;
