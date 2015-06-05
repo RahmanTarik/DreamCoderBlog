@@ -24,9 +24,9 @@ $(document).ready(function () {
     // Contact form popup send-button click event.
     $("#signInButton").click(function () {
         var email = $("#email").val();
-        var contact = $("#password").val();
-        var message = $("#message").val();
-        if (name == "" || email == "" || contactno == "" || message == "") {
+        var password = $("#password").val();
+
+        if (email == "" || password == "") {
             alert("Please Fill All Fields");
         } else {
             function validateEmail(email) {
@@ -40,8 +40,10 @@ $(document).ready(function () {
             if (validateEmail(email)) {
                 $("#signIn").css("display", "none");
                 $(this).parent().parent().hide();
+                return true;
             } else {
                 alert('Invalid Email Address');
+                return false;
             }
 
         }

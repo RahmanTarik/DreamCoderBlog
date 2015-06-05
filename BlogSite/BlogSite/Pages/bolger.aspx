@@ -1,8 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/blogSiteMaster.Master" AutoEventWireup="true" CodeBehind="bolger.aspx.cs" Inherits="BlogSite.Pages.bolger" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../Content/font-awesome.css" rel="stylesheet" />
+    <link href="../froala_editor_1.2.7/css/froala_editor.css" rel="stylesheet" />
+    <link href="../froala_editor_1.2.7/css/froala_style.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-2.1.4.js"></script>
+    <script src="../froala_editor_1.2.7/js/froala_editor.min.js"></script>
+    <script src="../froala_editor_1.2.7/js/plugins/tables.min.js"></script>
+    <script src="../froala_editor_1.2.7/js/plugins/lists.min.js"></script>
+    <script src="../froala_editor_1.2.7/js/plugins/colors.min.js"></script>
+    <script src="../froala_editor_1.2.7/js/plugins/media_manager.min.js"></script>
+    <script src="../froala_editor_1.2.7/js/plugins/font_family.min.js"></script>
+    <script src="../froala_editor_1.2.7/js/plugins/font_size.min.js"></script>
+    <script src="../froala_editor_1.2.7/js/plugins/block_styles.min.js"></script>
+    <script src="../froala_editor_1.2.7/js/plugins/video.min.js"></script>
+
+<script>
+    $(function () {
+        $('#edit').editable({ inlineMode: false, height: 300, alwaysBlank: true })
+    });
+  </script>    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Container" runat="server">
-     
+    
+
    <div id="tooplate_main">
 
         <div id="tooplate_content">
@@ -15,13 +36,7 @@
 
 
                     <h3>Add Your Post</h3>
-
-                    &nbsp;&nbsp;&nbsp;
-                        <label for="Post Category">Post Category:</label>&nbsp;&nbsp;
-                        <input type="text" id="postCategory" name="postCategory" class="required input_field" /><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br />
-&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                         <label for="Post Title">Post Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label>&nbsp;&nbsp;
                         <input type="text" class=" required input_field" name="Post Titel" id="postTitle" />
@@ -29,8 +44,10 @@
 
                             <label for="text">
                             <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             Details:<br />
-                        <textarea id="text" name="text" rows="0" cols="0" class="required" aria-expanded="true"></textarea><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <textarea id="edit" name="text" rows="0" cols="0" class="required" aria-expanded="true"></textarea><br />
                             <br />
                             <br />
                             <br />

@@ -69,16 +69,17 @@
                     <div id="signUp">
                         <div class="form" id="signUpForm">
                             <img src="" class="img" id="signUpCancel" />
-                            <h3>Booking Form</h3>
-                            <label>Name: <span>*</span></label>
-                            <input type="text" id="name" name="name" placeholder="Name" />
+                            <h3>Sign Up</h3>
+                            <label>First Name: <span>*</span></label>
+                            <input type="text" id="fname" name="fname" placeholder="First Name" />
+                            <label>First Name: <span>*</span></label>
+                            <input type="text" id="lname" name="fname" placeholder="Last Name" />
                             <label>Email: <span>*</span></label>
-                            <input type="text" id="email" name="email" placeholder="Email" />
-                            <label>Contact No: <span>*</span></label>
-                            <input type="text" id="contactno" name="contactno" placeholder="11 digit Mobile no." />
-                            <label>About Problem:</label>
-                            <textarea id="message" name="problem" placeholder="Problems......."></textarea>
-                            <asp:Button ID="Button1" runat="server" Text="signin" />
+                            <input type="text" id="rEmail" name="rEmail" placeholder="Email" />
+                            <label>Password: <span>*</span></label>
+                            <input type="password" id="rPassword" name="rPassword" placeholder="Password" />
+                            
+                            <asp:Button ID="signUpButton" runat="server" Text="Sign Up" />
                             <br />
                         </div>
                     </div>
