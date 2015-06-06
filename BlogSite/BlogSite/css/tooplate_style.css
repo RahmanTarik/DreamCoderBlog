@@ -49,7 +49,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 
 .cleaner { clear: both }
 .h10 { height: 79px;
-    margin-bottom: 108px;
+    
     width: 899px;
 }
 .h20 { height: 20px }
@@ -86,7 +86,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 
 #site_title { width: 228px; height: 70px; margin: 0 auto; padding-top: 20px; }
 #site_title h1 { margin: 0; padding: 0; }
-#site_title h1 a { display: block; width: 228px; height: 70px; color: #fff; text-indent: -10000px; background: url(../images/DreamCoderfi.png) no-repeat }
+#site_title h1 a { display: block; width: 228px; height: 70px; color: #fff; text-indent: -10000px; background: url(../images/DreamCoder.png) no-repeat }
 
 #tooplate_menu {
 	clear: both;
@@ -112,7 +112,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 #tooplate_content {
 	width: 900px;
 	padding: 30px;
-    height: 414px;
+    height: 442px;
 }
 
 .col_w900 { width: 900px; margin-bottom: 30px; padding-bottom: 30px; background: url(../images/tooplate_hdiv.png) repeat-x bottom }

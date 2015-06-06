@@ -36,22 +36,16 @@
 
 
                     <h3>Add Your Post</h3>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                        <label for="Post Title">Post Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label>&nbsp;&nbsp;
+                    &nbsp;<label for="Post Title">Post Title&nbsp;:</label>&nbsp;&nbsp;
                         <input type="text" class=" required input_field" name="Post Titel" id="postTitle" />
                         <div class="cleaner h10">
 
                             <label for="text">
                             <br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            Details:<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;Details :<br />
                         <textarea id="edit" name="text" rows="0" cols="0" class="required" aria-expanded="true"></textarea><br />
-                            <br />
-                            <br />
-                            <br />
-                             <asp:Button ID="saveButton" runat="server" Height="32px" Text="Save" Width="108px" />
+                           
+                             <asp:Button ID="saveButton" runat="server" Height="34px" Text="Save" Width="108px" />
                            <asp:Button ID="publishButton" runat="server" Text="Publish" Width="104px" Height="34px" Style="margin-right: 0kpx; margin-top: 0px" />
                      
                    
