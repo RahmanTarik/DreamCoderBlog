@@ -1,4 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="blogSiteMaster.master.cs" Inherits="BlogSite.Master.BlogSiteMaster" %>
+<%@ Import Namespace="BlogSite.Model" %>
+<%@ Import Namespace="Microsoft.SqlServer.Server" %>
 
 <!DOCTYPE html>
 
@@ -9,13 +11,14 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="../css/tooplate_style.css" rel="stylesheet" type="text/css" />
-    <link href="../css/ddsmoothmenu.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
     <link href="../css/jquery_popup.css" rel="stylesheet" />
-    
+    <link href="../css/style.css" rel="stylesheet" />
+
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/ddsmoothmenu.js"></script>
     <script src="../js/jquery_popup.js"></script>
-    
+
     <script type="text/javascript">
         ddsmoothmenu.init({
             mainmenuid: "tooplate_menu", //menu DIV id
@@ -25,11 +28,33 @@
             contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
         })
     </script>
+    <%
+        UserInfo userInfo = (UserInfo) Session["userInfo"];
+        string name = "guest";
+        const string imageLocation = "../images/user/";
+        string image = imageLocation+"0.jpg";
+       if (userInfo!=null && userInfo.Uid>0)
+       {
+           userMenu.Style.Add("display", "inline");
+           loginMenu.Style.Add("display", "none");
+           name = userInfo.UserName;
+           image = imageLocation+userInfo.UserImage;
+           nameLabel.InnerText = name;
+           userImage.Src = image;
 
+       }
+        else
+        {
+            userMenu.Style.Add("display", "none");
+            loginMenu.Style.Add("display", "inline");
+        }
+       %>
+    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    
     <form id="masterForm" runat="server">
         <div>
             <div id="tooplate_wrapper">
@@ -60,64 +85,93 @@
                             </li>
                             <li><a href="../Pages/blog.aspx"><span></span>Blog</a></li>
                             <li><a href="../Pages/contact.aspx"><span></span>Contact</a></li>
-                            <li style="float: right"><a id='onclickSignUp'><span></span>Sign Up</a></li>
-                            <li style="float: right"><a id='onclickSignIn'><span></span>Sign In</a></li>
-                             <li><a href="../Pages/bolger.aspx"><span></span>bolger</a></li>
+                            <div runat="server" id="loginMenu"> 
+                                <li style="float: right"><a id='onclickSignUp' ><span></span>Sign Up</a></li>
+                                <li style="float: right"><a id='onclickSignIn'><span></span>Sign In</a></li>
+                            </div>
+                            <div runat="server" id="userMenu">
+                                <li><a href="../Pages/bolger.aspx"><span></span>bolger</a></li>
+                                <li style="float: right">
+                                    
+                                    <a>
+                                        <label runat="server" id="nameLabel" class="nameLabel"></label>
+                                        <img runat="server" id="userImage" class="radious" src="" />
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Your Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Edit Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Account Settings
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <asp:LinkButton ID="logout" runat="server" OnClick="logOutButton_Click">Logout</asp:LinkButton>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </div>
                         </ul>
-                        <br style="clear: left" />
                     </div>
-                    <!-- end of tooplate_menu -->
-                    <div id="signIn">
-                        <div class="form" id="signInForm">
-                            <img src="" class="img" id="signInCancel" />
-                            <h3>Sign In</h3>
-                            <label>Email: <span></span></label>
-                            <input type="text" id="email" name="email" placeholder="Email" />
-                            <label>Password: <span></span></label>
-                            <input type="text" id="password" name="password" placeholder="Password" />
-                            <br />
-                            <asp:Button ID="signInButton" runat="server" Text="Sign In" OnClick="signInButton_Click" />
-                            
-                        </div>
-                    </div>
-                    <div id="signUp">
-                        <div class="form" id="signUpForm">
-                            <img src="" class="img" id="signUpCancel" />
-                            <h3>Sign Up</h3>
-                            <label>First Name: <span>*</span></label>
-                            <input type="text" id="fname" name="fname" placeholder="First Name" />
-                            <label>First Name: <span>*</span></label>
-                            <input type="text" id="lname" name="fname" placeholder="Last Name" />
-                            <label>Email: <span>*</span></label>
-                            <input type="text" id="rEmail" name="rEmail" placeholder="Email" />
-                            <label>Password: <span>*</span></label>
-                            <input type="password" id="rPassword" name="rPassword" placeholder="Password" />
-                            <br />
-                            <asp:Button ID="signUpButton" runat="server" Text="Sign Up" OnClick="signUpButton_Click" />
-                            
-                        </div>
-                    </div>
-                    <div id="test" runat="server">
-                        
-                    </div>
-                    <div>
-                        <asp:ContentPlaceHolder ID="Container" runat="server">
-                        </asp:ContentPlaceHolder>
-                    </div>
+                    <br style="clear: left" />
+                </div>
+                <!-- end of tooplate_menu -->
+                <div id="signIn">
+                    <div class="form" id="signInForm">
+                        <img src="" class="img" id="signInCancel" />
+                        <h3>Sign In</h3>
+                        <label>Email: <span></span></label>
+                        <input type="text" id="email" name="email" placeholder="Email" />
+                        <label>Password: <span></span></label>
+                        <input type="password" id="password" name="password" placeholder="Password" />
+                        <br />
+                        <asp:Button ID="signInButton" runat="server" Text="Sign In" OnClick="signInButton_Click" />
 
-                    <div>
-                        <asp:ContentPlaceHolder ID="Footer" runat="server">
-                        </asp:ContentPlaceHolder>
-
-                    </div>
-                    <div id="tooplate_footer">
-                        Copyright © 2048 <a href="#">Company Name</a>
-                        <div class="cleaner"></div>
                     </div>
                 </div>
-                <!-- end of forever header -->
+                <div id="signUp">
+                    <div class="form" id="signUpForm">
+                        <img src="" class="img" id="signUpCancel" />
+                        <h3>Sign Up</h3>
+                        <label>First Name: <span>*</span></label>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" />
+                        <label>First Name: <span>*</span></label>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" />
+                        <label>Email: <span>*</span></label>
+                        <input type="text" id="rEmail" name="rEmail" placeholder="Email" />
+                        <label>Password: <span>*</span></label>
+                        <input type="password" id="rPassword" name="rPassword" placeholder="Password" />
+                        <br />
+                        <asp:Button ID="signUpButton" runat="server" Text="Sign Up" OnClick="signUpButton_Click" />
+
+                    </div>
+                </div>
+
+                <div id="test" runat="server">
+                </div>
+                <div>
+                    <asp:ContentPlaceHolder ID="Container" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <div>
+                    <asp:ContentPlaceHolder ID="Footer" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </div>
+                <div id="tooplate_footer">
+                    Copyright © 2048 <a href="#">Company Name</a>
+                    <div class="cleaner"></div>
+                </div>
             </div>
-            <!-- end of forever wrapper -->
+            <!-- end of forever header -->
+        </div>
+        <!-- end of forever wrapper -->
         </div>
     </form>
 </body>

@@ -305,6 +305,10 @@
     <Content Include="froala_editor_1.2.7\js\plugins\urls.min.js" />
     <Content Include="froala_editor_1.2.7\js\plugins\video.min.js" />
     <Content Include="froala_editor_1.2.7\README.txt" />
+    <Content Include="images\DreamCoder.png" />
+    <Content Include="images\DreamCoderfi.png" />
+    <Content Include="images\user\0.jpg" />
+    <Content Include="images\user\1.jpg" />
     <Content Include="js\jquery_popup.js" />
     <Content Include="Master\blogSiteMaster.Master" />
     <Content Include="Pages\bolger.aspx" />
@@ -500,11 +504,15 @@
     <Content Include="Pages\flash_slider.html" />
     <Content Include="Pages\index.aspx" />
     <Content Include="Pages\portfolio.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\loginManager.cs" />
+    <Compile Include="BLL\RegistartionManager.cs" />
     <Compile Include="DAL\loginGatway.cs" />
+    <Compile Include="DAL\registrationGatway.cs" />
     <Compile Include="Master\blogSiteMaster.Master.cs">
       <DependentUpon>blogSiteMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -513,6 +521,8 @@
       <DependentUpon>blogSiteMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Model\login.cs" />
+    <Compile Include="Model\registration.cs" />
+    <Compile Include="Model\userInfo.cs" />
     <Compile Include="Pages\about.aspx.cs">
       <DependentUpon>about.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

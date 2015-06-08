@@ -51,8 +51,8 @@ $(document).ready(function () {
     });
 
     $("#signUpButton").click(function () {
-        var email = $("#email").val();
-        var password = $("#password").val();
+        var email = $("#rEmail").val();
+        var password = $("#rPassword").val();
         var lname = $("#lname").val();
         var fname = $("#fname").val();
 

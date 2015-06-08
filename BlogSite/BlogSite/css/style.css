@@ -7,3 +7,16 @@ section {
     margin: auto;
     text-align: left;
 }
+.radious {
+    border-radius: 50%;
+    height: 68px;
+    margin: -20px -55px 0 0px;
+    width: 68px;
+    vertical-align: central;
+}
+.nameLabel {
+    text-align: right;
+    margin-right: 10px;
+    
+}
+
