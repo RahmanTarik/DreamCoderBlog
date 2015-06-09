@@ -1,7 +1,4 @@
-﻿body {
-    /*text-align: center;*/
-}
-
+﻿
 section {
     width: 80%;
     margin: auto;
@@ -18,5 +15,14 @@ section {
     text-align: right;
     margin-right: 10px;
     
+}
+.Button {
+    background: papayawhip none repeat scroll 0 0;
+    border-radius: 15px;
+    float: left;
+    font-size: larger;
+    height: 40px;
+    margin: 0px 25px 10px 0px;
+    width: 120px;
 }
 

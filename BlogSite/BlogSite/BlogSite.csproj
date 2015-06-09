@@ -509,8 +509,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BlogerManager.cs" />
     <Compile Include="BLL\loginManager.cs" />
     <Compile Include="BLL\RegistartionManager.cs" />
+    <Compile Include="DAL\BlogerGatway.cs" />
     <Compile Include="DAL\loginGatway.cs" />
     <Compile Include="DAL\registrationGatway.cs" />
     <Compile Include="Master\blogSiteMaster.Master.cs">
@@ -521,6 +523,7 @@
       <DependentUpon>blogSiteMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Model\login.cs" />
+    <Compile Include="Model\post.cs" />
     <Compile Include="Model\registration.cs" />
     <Compile Include="Model\userInfo.cs" />
     <Compile Include="Pages\about.aspx.cs">

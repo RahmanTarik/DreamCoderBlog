@@ -1,6 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="blogSiteMaster.master.cs" Inherits="BlogSite.Master.BlogSiteMaster" %>
 <%@ Import Namespace="BlogSite.Model" %>
-<%@ Import Namespace="Microsoft.SqlServer.Server" %>
 
 <!DOCTYPE html>
 
