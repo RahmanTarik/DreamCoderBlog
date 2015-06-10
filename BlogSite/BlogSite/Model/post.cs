@@ -17,5 +17,6 @@ namespace BlogSite.Model
         public DateTime DateOfPost { get; set; }
         public string UserImage { get; set; }
         public int HitCount { get; set; }
+        public int TotalComments { get; set; }
     }
 }

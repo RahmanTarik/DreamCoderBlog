@@ -63,7 +63,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
     margin-bottom: 0px;
 }
 
-.image_wrapper { display: inline-block; border: 5px solid #dddddd;margin-bottom: 5px; height: 120px }
+.image_wrapper { display: inline-block; border: 5px solid #dddddd;margin-bottom: 5px;height: 120px;width: 120px;}
 .image_fl { float: left; margin: 3px 30px 0 0 }
 .image_fr { float: right; margin: 3px 0 0 30px }
 

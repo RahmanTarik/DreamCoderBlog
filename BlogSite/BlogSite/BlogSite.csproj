@@ -514,10 +514,12 @@
   <ItemGroup>
     <Compile Include="BLL\BlogerManager.cs" />
     <Compile Include="BLL\BlogManager.cs" />
+    <Compile Include="BLL\BlogPageManager.cs" />
     <Compile Include="BLL\loginManager.cs" />
     <Compile Include="BLL\RegistartionManager.cs" />
     <Compile Include="DAL\BlogerGatway.cs" />
     <Compile Include="DAL\BlogGatway.cs" />
+    <Compile Include="DAL\BlogPageGatway.cs" />
     <Compile Include="DAL\loginGatway.cs" />
     <Compile Include="DAL\registrationGatway.cs" />
     <Compile Include="Master\blogSiteMaster.Master.cs">

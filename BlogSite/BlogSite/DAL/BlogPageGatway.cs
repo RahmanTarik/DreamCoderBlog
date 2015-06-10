@@ -1,52 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using BlogSite.Model;
 
 namespace BlogSite.DAL
 {
-    public class BlogGatway
+    public class BlogPageGatway
     {
         private readonly string _connectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
 
-        public List<Post> GetMostViewedPost()
+        public bool IncreaseHitCount(int pid)
         {
-            SqlConnection connection = new SqlConnection(_connectionString);
-            string query = "select * from mostViewedPost";
-            SqlCommand command = new SqlCommand(query, connection);
-            List<Post> posts = new List<Post>();
-            connection.Open();
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            SqlConnection connection = null;
+            try
             {
-                Post post = new Post();
-                post.PostId = Convert.ToInt32(reader["pid"].ToString());
-                post.PostTitle = reader["title"].ToString();
-                post.PostBody = reader["post"].ToString();
-                post.Name = reader["fName"]+" "+ reader["lName"];
-                post.DateOfPost = Convert.ToDateTime(reader["dateOfPost"].ToString());
-                post.UserImage = reader["image"].ToString();
-                post.HitCount = Convert.ToInt32(reader["hitCount"].ToString());
-                post.TotalComments = GetTotalComments(post.PostId);
-                posts.Add(post);
+                connection = new SqlConnection(_connectionString);
+                string query = "update post set hitCount=hitCount+1 where pid=" + pid;
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                int rowAffected = command.ExecuteNonQuery();
+                connection.Close();
+                return true;
             }
-            connection.Close();
-            return posts;
+            catch (Exception)
+            {
+                if (connection!=null)
+                {
+                    connection.Close();
+                }
+                return false;
+            }
         }
-        public List<Post> GetMostRecentPost()
+
+        public Post GetPostByPid(int pid)
         {
             SqlConnection connection = new SqlConnection(_connectionString);
-            string query = "select * from mostRecentPost";
-            SqlCommand command = new SqlCommand(query, connection);
-            List<Post> posts = new List<Post>();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "GetPostByPid";
+            command.Parameters.Add("@pid",pid);
+            command.Connection = connection;
+            Post post = new Post();
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                Post post = new Post();
                 post.PostId = Convert.ToInt32(reader["pid"].ToString());
                 post.PostTitle = reader["title"].ToString();
                 post.PostBody = reader["post"].ToString();
@@ -55,19 +58,18 @@ namespace BlogSite.DAL
                 post.UserImage = reader["image"].ToString();
                 post.HitCount = Convert.ToInt32(reader["hitCount"].ToString());
                 post.TotalComments = GetTotalComments(post.PostId);
-                posts.Add(post);
             }
             connection.Close();
-            return posts;
+            return post;
         }
 
         public int GetTotalComments(int pid)
         {
             SqlConnection connection = new SqlConnection(_connectionString);
-            string query = "select COUNT(c.cid) as total from comment as c where c.pid="+pid;
+            string query = "select COUNT(c.cid) as total from comment as c where c.pid=" + pid;
             SqlCommand command = new SqlCommand(query, connection);
             int totalComments = 0;
-            
+
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())

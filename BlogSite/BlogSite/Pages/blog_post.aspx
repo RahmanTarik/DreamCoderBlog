@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/blogSiteMaster.Master" AutoEventWireup="true" CodeBehind="blog_post.aspx.cs" Inherits="BlogSite.Pages.blog_post" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/blogSiteMaster.Master" AutoEventWireup="true" CodeBehind="blog_post.aspx.cs" Inherits="BlogSite.Pages.BlogPost" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -6,11 +6,10 @@
     <div id="tooplate_main">
         <div id="tooplate_content">
             <div id="fullpost">
-                <img src="../images/tooplate_image_02.png" class="image_wrapper image_fl" alt="Image" />Posted in <a href="#">Templates</a> | <a href="#">134 comments</a>
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Vestibulum adipiscing tempus elit eu condimentum. Fusce at mi felis. Etiam sed velit nibh. Nunc bibendum justo nec eros elementum auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer orci velit, tincidunt at commodo et, semper sollicitudin nulla. In congue sodales ornare. Curabitur blandit dui eu erat porttitor vulputate. Morbi eu purus orci. Nulla facilisi. Quisque viverra, augue non rutrum cursus, risus arcu sodales lectus, vitae tincidunt mauris velit ac lacus. Donec facilisis laoreet erat, placerat rhoncus nisl feugiat at. Phasellus id purus blandit mi fermentum ullamcorper sit amet eu est.</p>
-                <p>Nullam l56ero velit, pellentesque vel facilisis quis, pretium quis diam. Sed congue odio ut elit vulputate at ullamcorper justo porta. Vivamus tempor hendrerit eros, et pretium est consequat et. Integer varius mauris ut odio cursus non interdum tortor laoreet. Cras vel eros vel odio viverra lacinia. Nullam sit amet sapien nulla. Etiam lobortis dignissim orci in placerat. Proin egestas leo at est semper vitae venenatis nisl tristique. Quisque porta molestie cursus. Aenean enim libero, placerat non molestie non, fringilla et nunc. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> and <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
-
+                <img runat="server" id="img" src="../images/user/0.jpg" class="image_wrapper image_fl" alt="Image" />
+                <p><span>Posted <a runat="server" id="name" href='#'></a></span> | <a runat="server" id="dateOfPost" href='#'></a> | <span>Viewed <a runat="server" id="hitCount" href='#'>0</a></span> | <span><a runat="server" id="totalComments" href='#'>0</a> Comments</span></p>
+                <h2 runat="server" id="Posttitle">Lorem ipsum dolor sit amet</h2>
+                <div runat="server" id="postBody"></div>
                 <div class="cleaner h30"></div>
 
                 <h3>Comments</h3>
