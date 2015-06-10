@@ -54,5 +54,10 @@ namespace BlogSite.Master
             Session.RemoveAll();
 
         }
+
+        protected void signInUpButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

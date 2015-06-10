@@ -41,7 +41,7 @@ namespace BlogSite.Pages
                     comment.UserComment = commentTextBox.Value;
                     if (_commentManager.InsertComment(comment))
                     {
-                        
+                        LoadComment();
                     }
                     else
                     {
