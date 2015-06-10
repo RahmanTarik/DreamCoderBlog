@@ -1,67 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Globalization;
 using BlogSite.BLL;
 using BlogSite.Model;
-using HtmlAgilityPack;
 
 namespace BlogSite.Pages
 {
     public partial class BlogPost : System.Web.UI.Page
     {
-        BlogPageManager blogPageManager = new BlogPageManager();
-        CommentManager commentManager = new CommentManager();
-        int pid = 0;
+        readonly BlogPageManager _blogPageManager = new BlogPageManager();
+        readonly CommentManager _commentManager = new CommentManager();
+        int _pid;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request["pid"]!=null)
+            if (!IsPostBack)
             {
-                try
-                {
-                    pid = Convert.ToInt32(Request["pid"].ToString());
-                }
-                catch (Exception)
-                {
-                    Response.Redirect("blog.aspx");
-                }
+                LoadBlog();
             }
-            if (pid>0)
+            else
             {
-                blogPageManager.IncreaseHitCount(pid);
-                Post post = blogPageManager.GetPostByPid(pid);
-                Posttitle.InnerText = post.PostTitle;
-                img.Src = "../images/user/" + post.UserImage;
-                postBody.InnerHtml = post.PostBody;
-                name.InnerText = post.Name;
-                dateOfPost.InnerText = post.DateOfPost.ToLongDateString();
-                totalComments.InnerText = post.TotalComments.ToString();
-                hitCount.InnerText = post.HitCount.ToString();
-                List<Comment> comments = commentManager.GetCommentByPid(pid);
-                string innerHtml = "";
-                foreach (Comment comment in comments)
-                {
-                    innerHtml += @"<li>
-                            <div class='comment_box commentbox1'>
-                                <div class='gravatar'>
-                                    <img src='../images/user/" + comment.UserImage + @"' alt='author' />
-                                </div>
-                                <div class='comment_text'>
-                                    <div class='comment_author'>"+comment.UserName+@"<span class='date'>"+comment.DateOfComment+@"</span></div>
-                                    <p>"+comment.UserComment+@"</p>
-                                </div>
-                                <div class='cleaner'></div>
-                            </div>
-                        </li>";
-                }
-                commentInput.InnerHtml = innerHtml;
+                LoadComment();
             }
         }
 
         protected void commentButton_Click(object sender, EventArgs e)
         {
+            errorMessage.InnerHtml = "";
             if (Session["userInfo"] == null)
             {
                 errorMessage.InnerHtml = "Sign In First";
@@ -73,9 +37,9 @@ namespace BlogSite.Pages
                     UserInfo userInfo = (UserInfo)Session["userInfo"];
                     Comment comment = new Comment();
                     comment.Uid = userInfo.Uid;
-                    comment.Pid = pid;
+                    comment.Pid = _pid;
                     comment.UserComment = commentTextBox.Value;
-                    if (commentManager.InsertComment(comment))
+                    if (_commentManager.InsertComment(comment))
                     {
                         
                     }
@@ -90,7 +54,60 @@ namespace BlogSite.Pages
                 }
                 
             }
-            
+            commentTextBox.Value = String.Empty;
+
+        }
+
+        private void LoadBlog()
+        {
+            if (Request["pid"] != null)
+            {
+                try
+                {
+                    _pid = Convert.ToInt32(Request["pid"]);
+                    ViewState["pid"] = _pid;
+                }
+                catch (Exception)
+                {
+                    Response.Redirect("blog.aspx");
+                }
+            }
+            if (_pid > 0)
+            {
+                _blogPageManager.IncreaseHitCount(_pid);
+                Post post = _blogPageManager.GetPostByPid(_pid);
+                Posttitle.InnerText = post.PostTitle;
+                img.Src = "../images/user/" + post.UserImage;
+                postBody.InnerHtml = post.PostBody;
+                name.InnerText = post.Name;
+                dateOfPost.InnerText = post.DateOfPost.ToLongDateString();
+                totalComments.InnerText = post.TotalComments.ToString(CultureInfo.InvariantCulture);
+                hitCount.InnerText = post.HitCount.ToString(CultureInfo.InvariantCulture);
+                LoadComment();
+            }
+        }
+
+        private void LoadComment()
+        {
+            _pid = (int) ViewState["pid"];
+            List<Comment> comments = _commentManager.GetCommentByPid(_pid);
+            string innerHtml = "";
+            foreach (Comment comment in comments)
+            {
+                innerHtml += @"<li>
+                            <div class='comment_box commentbox1'>
+                                <div class='gravatar'>
+                                    <img src='../images/user/" + comment.UserImage + @"' alt='author' />
+                                </div>
+                                <div class='comment_text'>
+                                    <div class='comment_author'>" + comment.UserName + @"<span class='date'>" + comment.DateOfComment + @"</span></div>
+                                    <p>" + comment.UserComment + @"</p>
+                                </div>
+                                <div class='cleaner'></div>
+                            </div>
+                        </li>";
+            }
+            commentInput.InnerHtml = innerHtml;
         }
     }
 }
