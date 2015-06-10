@@ -12,5 +12,10 @@ namespace BlogSite.Model
         public string PostBody { get; set; }
         public string PostStatus { get; set; }
         public int Uid { get; set; }
+        public string Name { get; set; }
+        public string About { get; set; }
+        public DateTime DateOfPost { get; set; }
+        public string UserImage { get; set; }
+        public int HitCount { get; set; }
     }
 }

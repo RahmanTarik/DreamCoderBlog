@@ -16,9 +16,9 @@ body {
 	background-image: url(../images/tooplate_body.jpg)
 }
 
-a, a:link, a:visited { color: #d22c86; font-weight: normal; text-decoration: underline; font-size: 12px }
+a, a:link, a:visited { color: #d22c86; font-weight: normal; text-decoration: none; font-size: 12px }
 
-a:hover { text-decoration: none; }
+a:hover { color: #a52a2a; }
 
 a.more { display: block; width: 84px; height: 25px; line-height: 22px; text-align: center; background: url(../images/tooplate_more.png); font-weight: 700; font-size: 12px; text-decoration: none; color: #000 }
 
@@ -63,7 +63,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
     margin-bottom: 0px;
 }
 
-.image_wrapper { display: inline-block; border: 5px solid #dddddd; margin-bottom: 5px }
+.image_wrapper { display: inline-block; border: 5px solid #dddddd;margin-bottom: 5px; height: 120px }
 .image_fl { float: left; margin: 3px 30px 0 0 }
 .image_fr { float: right; margin: 3px 0 0 30px }
 
