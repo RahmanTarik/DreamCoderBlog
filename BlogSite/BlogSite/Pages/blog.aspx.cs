@@ -39,5 +39,13 @@ namespace BlogSite.Pages
             }
             postDiv.InnerHtml = innerHtml;
         }
+
+        protected void searchButton_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(searchText.Value))
+            {
+                
+            }
+        }
     }
 }

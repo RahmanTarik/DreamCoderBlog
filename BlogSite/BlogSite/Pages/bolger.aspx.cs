@@ -14,7 +14,11 @@ namespace BlogSite.Pages
         BlogerManager blogerManager = new BlogerManager();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["userInfo"]==null)
+            {
+                Response.Redirect("index.aspx");
+            }
+           
         }
 
         protected void saveButton_Click(object sender, EventArgs e)

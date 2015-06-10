@@ -16,25 +16,19 @@ section {
     margin-right: 10px;
     
 }
-.Button {
-    background: papayawhip none repeat scroll 0 0;
-    border-radius: 15px;
-    float: left;
-    font-size: larger;
-    height: 40px;
-    margin: 0px 25px 10px 0px;
-    width: 120px;
-}
 .blogTitle {
     font-size: 35px;
     text-align: center;
 }
 .dropDown {
-    border-radius: 12px;
-    height: 30px;
+    height: 35px;
     float: left;
     width: 25%;
     font-size: larger;
+    margin: 0px 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 5px;
 }
 .searchDiv {
     width: 50%;
@@ -42,21 +36,16 @@ section {
     
 }
 .searchText {
-    border-radius: 12px;
     float: right;
-    height: 30px;
+    height: 25px;
     margin: 0px 10px;
     width: 40%;
     font-size: large;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 5px;
 }
-.searchButton {
-    border-radius: 12px;
-    float: right;
-    font-size: 23px;
-    height: 35px;
-    margin: 0 10px;
-    width: 25%;
-}
+
 .blogMenu {
     margin: 25px 0px;
 }
@@ -81,6 +70,7 @@ section {
    font-family: Georgia, serif;
    text-decoration: none;
    vertical-align: middle;
+   margin: 5px;
    }
 .button:hover {
    border-top-color: #28597a;
@@ -90,4 +80,37 @@ section {
 .button:active {
    border-top-color: #1b435e;
    background: #1b435e;
+   }
+.searchButton {
+    float: right;
+    margin: 0px 10px;
+   border-top: 1px solid #9cd6a5;
+   background: #ffffff;
+   background: -webkit-gradient(linear, left top, left bottom, from(#d4c0f0), to(#ffffff));
+   background: -webkit-linear-gradient(top, #d4c0f0, #ffffff);
+   background: -moz-linear-gradient(top, #d4c0f0, #ffffff);
+   background: -ms-linear-gradient(top, #d4c0f0, #ffffff);
+   background: -o-linear-gradient(top, #d4c0f0, #ffffff);
+   padding: 6px 18px;
+   -webkit-border-radius: 16px;
+   -moz-border-radius: 16px;
+   border-radius: 16px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #000000;
+   font-size: 18px;
+   font-family: Georgia, Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.searchButton:hover {
+   border-top-color: #d1d2de;
+   background: #d1d2de;
+   color: #030303;
+   }
+.searchButton:active {
+   border-top-color: #385d75;
+   background: #385d75;
    }

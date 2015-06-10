@@ -25,7 +25,7 @@
                     <div runat="server" id="errorMessage"></div>
                     <div class="form_row">
                         <label class="">Comment (* required )</label><br />
-                        <input class="" runat="server" type="text" name="commentTextBox" id="commentTextBox" placeholder="Write your comment ....." />
+                        <input class="input" runat="server" type="text" name="commentTextBox" id="commentTextBox" placeholder="Write your comment ....." />
                     </div>
                     <asp:Button ID="commentButton" runat="server" Text="Comment" class="button" OnClick="commentButton_Click" />
                     <div class="cleaner h40"></div>
