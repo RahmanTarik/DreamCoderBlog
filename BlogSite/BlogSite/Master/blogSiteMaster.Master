@@ -4,8 +4,11 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+
+<html>
 <head runat="server">
+    <meta charset="UTF-8">
     <title>Dream Coder</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />

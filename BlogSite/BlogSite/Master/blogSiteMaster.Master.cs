@@ -52,6 +52,7 @@ namespace BlogSite.Master
         protected void logOutButton_Click(object sender, EventArgs e)
         {
             Session.RemoveAll();
+            Response.Redirect("~/Pages/index.aspx");
 
         }
 

@@ -18,7 +18,7 @@
                     </asp:DropDownList>
                 </div>
                 <div class="searchDiv">
-                    <asp:Button CssClass="searchButton" ID="searchButton" runat="server" Text="search" />
+                    <asp:Button CssClass="searchButton" ID="searchButton" runat="server" Text="search" OnClick="searchButton_Click" />
                     <input class="searchText" id="searchText" type="text" runat="server" placeholder="Search" />
                 </div>
             </div>

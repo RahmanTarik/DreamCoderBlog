@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using BlogSite.Model;
 
@@ -74,6 +75,34 @@ namespace BlogSite.DAL
             }
             connection.Close();
             return totalComments;
+        }
+
+        public List<Post> GetSearchPost(string search)
+        {
+            SqlConnection connection = new SqlConnection(_connectionString);
+            SqlCommand command = new SqlCommand();
+            command.CommandType=CommandType.StoredProcedure;
+            command.CommandText = "search";
+            command.Parameters.Add("@search", search);
+            command.Connection = connection;
+            List<Post> posts = new List<Post>();
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Post post = new Post();
+                post.PostId = Convert.ToInt32(reader["pid"].ToString());
+                post.PostTitle = reader["title"].ToString();
+                post.PostBody = reader["post"].ToString();
+                post.Name = reader["fName"] + " " + reader["lName"];
+                post.DateOfPost = Convert.ToDateTime(reader["dateOfPost"].ToString());
+                post.UserImage = reader["image"].ToString();
+                post.HitCount = Convert.ToInt32(reader["hitCount"].ToString());
+                post.TotalComments = GetTotalComments(post.PostId);
+                posts.Add(post);
+            }
+            connection.Close();
+            return posts;
         }
     }
 }

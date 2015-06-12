@@ -19,5 +19,9 @@ namespace BlogSite.BLL
         {
             return blogGatway.GetMostRecentPost();
         }
+         public List<Post> GetSearchPost(string search)
+         {
+             return blogGatway.GetSearchPost(search);
+         }
     }
 }
