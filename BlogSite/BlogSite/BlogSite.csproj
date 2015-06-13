@@ -331,6 +331,7 @@
     <Content Include="Content\css_pirobox\Thumbs.db" />
     <Content Include="Content\css_pirobox\white\Thumbs.db" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Pages\Profile.aspx" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
@@ -591,6 +592,13 @@
     </Compile>
     <Compile Include="Pages\portfolio.aspx.designer.cs">
       <DependentUpon>portfolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

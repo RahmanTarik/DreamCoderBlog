@@ -34,6 +34,7 @@ namespace BlogSite.DAL
                     userInfo.UserName = reader2["lName"].ToString();
                     userInfo.UserImage = reader2["image"].ToString();
                     userInfo.About = reader2["about"].ToString();
+                    userInfo.Email = login.Email;
                 }
             }
             connection.Close();

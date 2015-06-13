@@ -26,7 +26,7 @@
                 
                 <div id="tooplate_content">
                 
-                	<h2>Welcome To Pinky Flow Theme!</h2>
+                	<h2>Welcome To Dream Coder</h2>
                     <div class="image_wrapper image_fl"><span></span><img src="../images/tooplate_image_01.jpg" alt="image" /></div>
                     <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam metus eros, pulvinar eu elementum et, suscipit in est. Vivamus hendrerit tellus id sem rutrum in adipiscing tellus posuere. Maecenas suscipit dictum tempus.</em></p>	
                     <p>Pinky Flow is brought to you by <strong><span class="orange">too</span><span class="green">plate</span></strong>. Credit goes to <a rel="nofollow" href="http://www.photovaco.com">Free Photos</a> for photos.  Proin nec volutpat velit. Sed sagittis libero et augue fringilla vitae fringilla neque placerat. Nunc fermentum mi ut nisi tincidunt eget sollicitudin nibh ultrices. Integer neque dui, viverra eget sodales sed, eleifend at arcu. Etiam et enim sed sem tincidunt semper vel in metus.   Feugiat luctus malesuada non, aliquet et justo. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> and <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>

@@ -104,5 +104,61 @@ namespace BlogSite.DAL
             connection.Close();
             return posts;
         }
+        public List<Post> GetMyPostPublished( int uid)
+        {
+            SqlConnection connection = new SqlConnection(_connectionString);
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "myPostPublish";
+            command.Parameters.Add("@uid", uid);
+            command.Connection = connection;
+            List<Post> posts = new List<Post>();
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Post post = new Post();
+                post.PostId = Convert.ToInt32(reader["pid"].ToString());
+                post.PostTitle = reader["title"].ToString();
+                post.PostBody = reader["post"].ToString();
+                post.Name = reader["fName"] + " " + reader["lName"];
+                post.Status = reader["status"].ToString();
+                post.DateOfPost = Convert.ToDateTime(reader["dateOfPost"].ToString());
+                post.UserImage = reader["image"].ToString();
+                post.HitCount = Convert.ToInt32(reader["hitCount"].ToString());
+                post.TotalComments = GetTotalComments(post.PostId);
+                posts.Add(post);
+            }
+            connection.Close();
+            return posts;
+        }
+        public List<Post> GetMyPostUnPublished(int uid)
+        {
+            SqlConnection connection = new SqlConnection(_connectionString);
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "myPostUnPublish";
+            command.Parameters.Add("@uid", uid);
+            command.Connection = connection;
+            List<Post> posts = new List<Post>();
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Post post = new Post();
+                post.PostId = Convert.ToInt32(reader["pid"].ToString());
+                post.PostTitle = reader["title"].ToString();
+                post.PostBody = reader["post"].ToString();
+                post.Name = reader["fName"] + " " + reader["lName"];
+                post.Status = reader["status"].ToString();
+                post.DateOfPost = Convert.ToDateTime(reader["dateOfPost"].ToString());
+                post.UserImage = reader["image"].ToString();
+                post.HitCount = Convert.ToInt32(reader["hitCount"].ToString());
+                post.TotalComments = GetTotalComments(post.PostId);
+                posts.Add(post);
+            }
+            connection.Close();
+            return posts;
+        }
     }
 }

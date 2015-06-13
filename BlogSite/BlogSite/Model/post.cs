@@ -14,6 +14,7 @@ namespace BlogSite.Model
         public int Uid { get; set; }
         public string Name { get; set; }
         public string About { get; set; }
+        public string Status { get; set; }
         public DateTime DateOfPost { get; set; }
         public string UserImage { get; set; }
         public int HitCount { get; set; }

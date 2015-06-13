@@ -11,6 +11,7 @@ namespace BlogSite.Model
         public string UserName { get; set; }
         public string UserImage { get; set; }
         public string About { get; set; }
+        public string Email { get; set; }
         
     }
 }

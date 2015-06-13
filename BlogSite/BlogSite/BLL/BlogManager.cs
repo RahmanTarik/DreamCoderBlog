@@ -23,5 +23,14 @@ namespace BlogSite.BLL
          {
              return blogGatway.GetSearchPost(search);
          }
+
+        public List<Post> GetMyPostPublished(int uid)
+        {
+            return blogGatway.GetMyPostPublished(uid);
+        }
+        public List<Post> GetMyPostUnPublished(int uid)
+        {
+            return blogGatway.GetMyPostUnPublished(uid);
+        }
     }
 }

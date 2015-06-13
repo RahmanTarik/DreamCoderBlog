@@ -114,3 +114,37 @@ section {
    border-top-color: #385d75;
    background: #385d75;
    }
+
+.myProfile {
+    width: 70%;
+}
+.profileContainer {
+    width: 100%;
+}
+.profileItemContainer {
+    width: 50%;
+    font-size: 18px;
+}
+
+.profileItemL {
+    width: 30%;
+}
+.profileItemR {
+    width: 70%;
+}
+.image_wrapper2 {
+    border: 5px solid #dddddd;
+    display: inline-block;
+    height: 220px;
+    margin-bottom: 5px;
+    width: 220px;
+    align-items: center;
+}
+.dropDownContainer {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+.aligin_center {
+    text-align: center;
+}
