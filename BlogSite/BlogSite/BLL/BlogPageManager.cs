@@ -20,5 +20,10 @@ namespace BlogSite.BLL
         {
             return blogPageGatway.GetPostByPid(pid);
         }
+
+        public bool UpdatePostStatus(int pid)
+        {
+            return blogPageGatway.UpdatePostStatus(pid) > 0;
+        }
     }
 }

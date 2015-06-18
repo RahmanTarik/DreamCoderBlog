@@ -148,3 +148,25 @@ section {
 .aligin_center {
     text-align: center;
 }
+.image_wrapper3 {
+    border: 5px solid #dddddd;
+    display: inline-block;
+    height: 420px;
+    margin-bottom: 5px;
+    width: 450px;
+    align-items: center;
+    float: left;
+    margin-right: 20px;
+}
+.homeContainer {
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+}
+.homeContent {
+    float: left;
+    margin: 1px;
+    width: 100%;
+    margin-left: 5px;
+
+}

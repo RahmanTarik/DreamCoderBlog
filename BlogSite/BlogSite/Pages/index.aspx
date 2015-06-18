@@ -16,43 +16,49 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="Container" runat="server">
     <div id="tooplate_main">
-                <div id="tooplate_slider">
-                    <div id="flash_grid_slider">
-                        <a href="http://www.adobe.com/go/getflashplayer">
-                            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
-                        </a>
-                    </div>
-				</div>
-                
-                <div id="tooplate_content">
-                
-                	<h2>Welcome To Dream Coder</h2>
-                    <div class="image_wrapper image_fl"><span></span><img src="../images/tooplate_image_01.jpg" alt="image" /></div>
-                    <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam metus eros, pulvinar eu elementum et, suscipit in est. Vivamus hendrerit tellus id sem rutrum in adipiscing tellus posuere. Maecenas suscipit dictum tempus.</em></p>	
-                    <p>Pinky Flow is brought to you by <strong><span class="orange">too</span><span class="green">plate</span></strong>. Credit goes to <a rel="nofollow" href="http://www.photovaco.com">Free Photos</a> for photos.  Proin nec volutpat velit. Sed sagittis libero et augue fringilla vitae fringilla neque placerat. Nunc fermentum mi ut nisi tincidunt eget sollicitudin nibh ultrices. Integer neque dui, viverra eget sodales sed, eleifend at arcu. Etiam et enim sed sem tincidunt semper vel in metus.   Feugiat luctus malesuada non, aliquet et justo. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> and <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</p>
-                    <div class="cleaner h40"></div>
-<div class="col_allw280 fp_service_box">
-                        <h4>pharetra id turpis<span>Lorem Ipsum Dolor</span></h4>
-                        <p>Nam ornare dui id mi elementum pretium. Mauris lacus lorem, consectetur eu pellentesque non, fermentum placerat leo.</p>
-                        <a href="#" class="more">more</a>
-                    </div>
-<div class="col_allw280 fp_service_box">
-                        <h4>semper nisl ac nibh<span>Donec Tincidunt Varius</span></h4>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eu mauris id neque.</p>
-                        <a href="#" class="more">more</a>
-                    </div>
-<div class="col_allw280 fp_service_box col_last">
-                        <h4>consect adipiscing elit<span>Etiam Gravida Sagittis</span></h4>
-                        <p>Cras eu egestas sem. Aenean mollis feugiat massa, eget pharetra nunc interdum non. Etiam euismod sem ac sem tincidunt adipiscin.</p>
-                        <a href="#" class="more">more</a>
-                    </div>
-                
-                	<div class="cleaner"></div>
+        <div id="tooplate_slider">
+            <div id="flash_grid_slider">
+                <a href="http://www.adobe.com/go/getflashplayer">
+                    <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+                </a>
+            </div>
+        </div>
+
+        <div id="tooplate_content">
+
+            <h2>Welcome To Dream Coder</h2>
+            <div class="homeContainer">
+                <div class="homeContent">
+
+                    <img class="image_wrapper3" src="../images/aboutt.jpg" alt="image" />
+                    <p>Dream Coder was formed at BASIS in april, 2015. The team was formed for broadcasting our knowledge and expose the potential. BITM gives us an oppurtunity to gather knowledge about object oriented programming using C# and Web development using asp.net</p>
+                    <p>It’s hard to remember a world without blogs. Originally a sort of online journal full of mundane personal updates, web logs have morphed into an extremely powerful form of communication.</p>
+                    <p>It shouldn’t be any surprise that the tech world embraced the blogosphere far before every newspaper in the country started making their writers blog alongside their standard news stories. As a result, there are blogs that are so great, so informative, so current — you’d be lost in your tech career without them. Here’s some we monitor daily. Add them to your bookmarks!</p>
+                    <h3>Overview </h3>
+                    <p>Introduction to Projects for Team Members is a one-day seminar that provides participants with the skills needed to effectively participate as part of a project team. Intended as an introduction to project management concepts for team members and support staff, the course combines discussion, demonstrations, and hands-on exercises to introduce and reinforce key concepts while providing information that can be immediately applied on the job.</p>
+                    <h3>Objectives </h3>
+                    <p>
+                        The course focuses on practical results and real world explanations. The course goal is to introduce effective project team member skills. At the conclusion of the class, participants will:
+                        <ul type="disc">
+                            <li>Have been introduced to the Project Management concepts and language used to define, plan and manage projects</li>
+                            <li>Be able to identify tasks as the elementary units of project work</li>
+                            <li>Understand the importance of timely and accurate status reporting</li>
+                            <li>Understand the concept of task dependencies and the implications of schedlie slippage</li>
+                            <li>Be familiar with the fundamentals of time management for individuals and how this relates to project performance and reporting</li>
+                        </ul>
+
+                    </p>
+
+
+
+
                 </div>
-				
-                <div class="cleaner"></div>
-            </div> <!-- end of tooplate_main -->
-            
+
+            </div>
+        </div>
+        <!-- end of tooplate_main -->
+    </div>
+    <div class="cleaner"></div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Footer" runat="server">
 </asp:Content>

@@ -83,6 +83,14 @@ namespace BlogSite.Pages
                 dateOfPost.InnerText = post.DateOfPost.ToLongDateString();
                 totalComments.InnerText = post.TotalComments.ToString(CultureInfo.InvariantCulture);
                 hitCount.InnerText = post.HitCount.ToString(CultureInfo.InvariantCulture);
+                if (post.Status.Equals("s"))
+                {
+                    publishButton.Style["display"] = "inline";
+                }
+                else
+                {
+                    publishButton.Style["display"] = "none";
+                }
                 LoadComment();
             }
         }
@@ -108,6 +116,14 @@ namespace BlogSite.Pages
                         </li>";
             }
             commentInput.InnerHtml = innerHtml;
+        }
+
+        protected void publishButton_Click(object sender, EventArgs e)
+        {
+            if (_blogPageManager.UpdatePostStatus(_pid))
+            {
+                LoadBlog();
+            }
         }
     }
 }

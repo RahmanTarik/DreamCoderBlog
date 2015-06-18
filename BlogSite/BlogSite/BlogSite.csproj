@@ -308,6 +308,7 @@
     <Content Include="froala_editor_1.2.7\js\plugins\urls.min.js" />
     <Content Include="froala_editor_1.2.7\js\plugins\video.min.js" />
     <Content Include="froala_editor_1.2.7\README.txt" />
+    <Content Include="images\close.png" />
     <Content Include="images\DreamCoder.png" />
     <Content Include="images\DreamCoderfi.png" />
     <Content Include="images\user\0.jpg" />

@@ -5,10 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Container" runat="server">
     <div id="tooplate_main">
         <div id="tooplate_content">
+            <asp:Button ID="publishButton" runat="server" Text="Publish" class="button float_r" OnClick="publishButton_Click"/>
             <div id="fullpost">
                 <img runat="server" id="img" src="../images/user/0.jpg" class="image_wrapper image_fl" alt="Image" />
                 <p><span>Posted <a runat="server" id="name" href='#'></a></span>| <a runat="server" id="dateOfPost" href='#'></a>| <span>Viewed <a runat="server" id="hitCount" href='#'>0</a></span> | <span><a runat="server" id="totalComments" href='#'>0</a> Comments</span></p>
-                <h2 runat="server" id="Posttitle">Lorem ipsum dolor sit amet</h2>
+                <h2 runat="server" id="Posttitle"></h2>
                 <div runat="server" id="postBody"></div>
                 <div class="cleaner h30"></div>
 

@@ -98,7 +98,7 @@
                 <!-- end of tooplate_menu -->
                 <div id="signIn">
                     <div class="form" id="signInForm">
-                        <img src="" class="img" id="signInCancel" />
+                        <img src="../images/close.png" class="img" id="signInCancel" />
                         <h3>Sign In</h3>
                         <label>Email: <span></span></label>
                         <input class="input" type="email" id="email" name="email" placeholder="Email" />
@@ -110,7 +110,7 @@
                 </div>
                 <div id="signUp">
                     <div class="form" id="signUpForm">
-                        <img src="" class="img" id="signUpCancel" />
+                        <img src="../images/close.png" class="img" id="signUpCancel" />
                         <h3>Sign Up</h3>
                         <label>First Name: <span>*</span></label>
                         <input class="input" type="text" id="fname" name="fname" placeholder="First Name" />

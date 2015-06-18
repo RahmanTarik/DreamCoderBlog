@@ -56,6 +56,7 @@ namespace BlogSite.DAL
                 post.Name = reader["fName"] + " " + reader["lName"];
                 post.DateOfPost = Convert.ToDateTime(reader["dateOfPost"].ToString());
                 post.UserImage = reader["image"].ToString();
+                post.Status = reader["status"].ToString();
                 post.HitCount = Convert.ToInt32(reader["hitCount"].ToString());
                 post.TotalComments = GetTotalComments(post.PostId);
             }
@@ -78,6 +79,18 @@ namespace BlogSite.DAL
             }
             connection.Close();
             return totalComments;
+        }
+
+        public int UpdatePostStatus(int pid)
+        {
+            SqlConnection connection = new SqlConnection(_connectionString);
+            string query = "update post set status ='p' where pid="+pid;
+            SqlCommand command = new SqlCommand(query,connection);
+
+            connection.Open();
+            int rowAffected = command.ExecuteNonQuery();
+            connection.Close();
+            return rowAffected;
         }
     }
 }
